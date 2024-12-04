@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Youtube Header Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            margin: 0;
+            background-image: url(background.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .leftSection {
+            width: 350px;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+
+        .logoIcon {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            position: absolute;
+            vertical-align: center;
+        }
+
+        h2 {
+            display: inline-block;
+            margin: 0;
+            vertical-align: center;
+            margin-bottom: 10px;
+            margin-left: 70px;
+            margin-top: 14px;
+            font-family: Sixtyfour;
+            color: burlywood;
+        }
+
+        .midSection {
+            display: flex;
+            max-width: 550px;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 700;
+            color: #cb997e;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: lightgreen;
+            border-radius: 20px;
+            color: lightcoral;
+        }
+
+        .rightSection {
+            width: 450px;
+            margin-right: 50px;
+            margin-left: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .searchIcon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 100px;
+        }
+
+        .secDiv {
+            height: 500px;
+            width: 1000px;
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+
+        h1 {
+            font-size: 80px;
+            color: white;
+            font-family: "Roboto Mono";
+        }
+
+        .joinBtn {
+            width: 150px;
+            height: 40px;
+            display: block;
+            border: 1px solid black;
+            margin-top: 30px;
+            background-color: lightsalmon;
+            border-radius: 20px;
+            box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.4);
+            color: rgb(238, 214, 214);
+        }
+
+        p {
+            font-size: 30px;
+            margin: 0;
+            color: white;
+            font-family: "Poor Story"
+        }
+
+        .span {
+            margin-left: 10px;
+            color: white;
+        }
+
+        #signBtn {
+            box-shadow: inset 1px 2px 5px rgba(114, 114, 114, 0.842);
+        }
+
+        /* Media Queries for Responsiveness */
+
+        @media (max-width: 1200px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                align-items: flex-start;
+            }
+
+            .leftSection, .rightSection {
+                width: 100%;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            h2 {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .midSection {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .midSection button {
+                margin: 5px 0;
+            }
+
+            .secDiv {
+                width: 100%;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 24px;
+            }
+
+            .joinBtn {
+                width: 200px;
+                height: 45px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logoIcon {
+                height: 50px;
+                width: 50px;
+                display: none;
+            }
+
+            .leftSection {
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+
+            .midSection {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .midSection button {
+                font-size: 18px;
+                width: 80%;
+                margin: 5px 0;
+            }
+
+            .rightSection {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 20px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .searchIcon {
+                width: 40px;
+                height: 40px;
+                margin-left: 0;
+                display: none;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .joinBtn {
+                width: 100%;
+                height: 50px;
+                font-size: 18px;
+            }
+            #signBtn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                height: auto;
+            }
+
+            .midSection button {
+                font-size: 16px;
+                width: 80%;
+            }
+
+            .secDiv {
+                width: 100%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+            .logoIcon {
+                display: none;
+            }
+            p {
+                font-size: 18px;
+            }
+
+            .joinBtn {
+                width: 100%;
+                height: 50px;
+                font-size: 18px;
+            }
+
+            .searchIcon {
+                width: 40px;
+                height: 40px;
+                margin-left: 0;
+                
+            }
+        }
+
+        .modal {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            justify-content: s;
+
+        }
+        .modal input {
+            width: 200px;
+            height: 35px;
+            margin-top: 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+    .modal input::placeholder {
+        font-size: 15px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffffff;
+        text-shadow: 0 0 15px rgb(253, 93, 117);
+    }
+        .login {
+            width: 150px;
+            height: 40px;
+            display: block;
+            margin-top: 30px;
+            background-color: lightsalmon;
+            border-radius: 20px;
+            box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.4);
+            color: rgb(238, 214, 214);
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="leftSection">
+            <img class="logoIcon" src="ProfileIcon.jpeg">
+            <h2>John Mark</h2>
+        </div>
+        <div class="midSection">
+            <button>About</button>
+            <button>Program</button>
+            <button>Courses</button>
+            <button>Reviews</button>
+        </div>
+        <div class="rightSection">
+            <img class="searchIcon" src="searchIcon.jpeg">
+            <button id="signBtn" style="width: 200px; height: 50px; border-radius: 50px; border:2px solid rgb(8, 8, 8); margin-left:50px; background-color:lightsalmon; color:rgb(238, 214, 214);">Signin</button>
+        </div>
+    </div>
+
+    <div class="secDiv">
+        <h1>Your next big idea starts here</h1>
+        <p>"Live as if you were to die tomorrow <br>
+            <span class="span">Learn as if you were to live forever".</span></p>
+        <button class="joinBtn">Join now!</button>
+    </div>
+
+     <!-- Modal for Login -->
+     
+
+    <script>
+     document.querySelector('.joinBtn')
+        .addEventListener('click', () => {
+            document.querySelector('.secDiv')
+                .innerHTML = `
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Login</h2>
+                        <form action="#">
+                            <input type="text" placeholder="Username" required class='user'><br>
+                            <input type="text" placeholder="Password" required class='pass'><br>
+                            <button type="submit" class='login js-login' onclick='login()'>Login</button>
+                        </form>
+                    </div>
+                </div>
+                
+                `;
+        });
+
+    function login() {
+        const username = document.querySelector('.user').value;
+        const password = document.querySelector('.pass').value;
+
+        if (username === 'John' && password === 'Valiente') {
+            alert('You are successfully logged in');
+  
+        }else {
+            alert('Wrong username or password')
+        }
+    }
+               
+      
+    </script>
+
+</body>
+</html>
